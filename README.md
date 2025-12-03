@@ -1,32 +1,19 @@
-# 🧠 Breast Cancer Detection using Logistic Regression
+# Breast Cancer Prediction
 
-This project applies **Logistic Regression** to classify tumors as **benign or malignant** using the Breast Cancer dataset. It was built in **Google Colab** using `pandas` and `scikit-learn`.
+This project builds a Logistic Regression model to classify breast tumors as **malignant** or **benign** using the Breast Cancer Wisconsin dataset (from `sklearn`).
 
----
+## Dataset
+- Source: `sklearn.datasets.load_breast_cancer()`
+- Features: 30 numeric features
+- Dataset shape: 569 samples × 30 features
+- Train / Test split: 455 samples (train), 114 samples (test) — ≈ 80 / 20
 
-## 📁 Dataset
+## Preprocessing
+- The notebook loads the sklearn dataset and converts it to a DataFrame.
 
-- File: `breast_cancer.csv`
-- Features: Cell measurements like radius, texture, etc.
-- Target: Diagnosis (Benign or Malignant)
+## Model
+- Algorithm: **Logistic Regression** (scikit-learn)
 
----
-
-## 🚀 Steps
-
-1. Load dataset using `pandas`
-2. Split into training and test sets (80/20)
-3. Train using `LogisticRegression`
-4. Evaluate using:
-   - Confusion Matrix
-   - 10-fold Cross Validation
-
----
-
-## 📊 Results
-
-- Confusion Matrix:
-[[84 3]
-[ 3 47]]
-- Accuracy: **96.70%**
-- Standard Deviation: **1.97%**
+## Results
+- Training accuracy: **0.9494505494505494** (~94.95%)
+- Test accuracy: **0.9298245614035088** (~92.98%)
